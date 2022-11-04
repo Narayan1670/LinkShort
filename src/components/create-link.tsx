@@ -38,7 +38,7 @@ const CreateLinkForm: NextPage = () => {
           <input
             type="button"
             value="Copy Link"
-            className="rounded bg-pink-500 py-1.5 px-1 font-bold cursor-pointer ml-2"
+            className="rounded bg-slate-800 py-1.5 px-1 font-bold cursor-pointer ml-2"
             onClick={() => {
               copy(`${url}/${form.slug}`);
             }}
@@ -47,7 +47,7 @@ const CreateLinkForm: NextPage = () => {
         <input
           type="button"
           value="Reset"
-          className="rounded bg-pink-500 py-1.5 px-1 font-bold cursor-pointer m-5"
+          className="rounded bg-slate-800 py-1.5 px-1 font-bold cursor-pointer m-5"
           onClick={() => {
             createSlug.reset();
             setForm({ slug: "", url: "" });
@@ -92,7 +92,7 @@ const CreateLinkForm: NextPage = () => {
         <input
           type="button"
           value="Random"
-          className="rounded bg-pink-500 py-1.5 px-1 font-bold cursor-pointer ml-2"
+          className="rounded bg-slate-800 py-1.5 px-1 font-bold cursor-pointer ml-2"
           onClick={() => {
             const slug = nanoid();
             setForm({
@@ -116,7 +116,7 @@ const CreateLinkForm: NextPage = () => {
       <input
         type="submit"
         value="Create"
-        className="rounded bg-pink-500 p-1 font-bold cursor-pointer mt-1"
+        className="rounded bg-slate-800 p-1 font-bold cursor-pointer mt-1"
         disabled={slugCheck.isFetched && slugCheck.data!.used}
       />
     </form>
